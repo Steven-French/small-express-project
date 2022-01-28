@@ -5,9 +5,9 @@ const path = require('path');
 const app = express();
 const server= http.createServer(app);
 
-app.use(express.static('public'));
-app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrapp/dist/css')));
-app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrapp/dist/js')));
+app.use(express.static(__dirname + '/public'));
+app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')));
+app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')));
 
 app.set('view engine', 'ejs');
 
